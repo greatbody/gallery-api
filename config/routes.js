@@ -20,7 +20,9 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-
+  'post /photos': 'PhotoController.upload',
+  'get /photos': 'PhotoController.index',
+  'get /photos/view/:id': 'PhotoController.view',
 
   /***************************************************************************
   *                                                                          *

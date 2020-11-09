@@ -26,6 +26,14 @@ module.exports = {
 
   },
 
+  customToJSON: function() {
+    return {
+      id: this.id,
+      name: this.name,
+      src: `/photos/view/${this.id}`,
+    }
+  }
+
 };
 
-sails.config.models.migrate = 'drop';
+sails.config.models.migrate = 'alter';
